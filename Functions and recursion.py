@@ -80,4 +80,66 @@ f()
 print(a)  #1 0
 
 ################
+
+def f():
+    print(a)
+    if False:
+        a = 0
+
+a = 1
+f()  # Error. local variable 'a' referenced before assignment
+
+############
+
+
+def f():
+    global a
+    a = 1
+    print(a)
+
+a = 0
+f()
+print(a) # 1 1
+
+####################
+def factorial(n):
+    global f
+    res = 1
+    for i in range(2, n + 1):
+        res *= i
+    f = res
+
+n = int(input())
+factorial(n)
+print(f)  
+######################
+
+# start of chunk of code that can be copied from program to program
+def factorial(n):
+    res = 1
+    for i in range(2, n + 1):
+        res *= i
+    return res
+# end of piece of code
+
+n = int(input())
+f = factorial(n)
+print(f)
+# doing other stuff with variable f
+"""
+
+# 3. Recursion
+
+"""
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+
+###################
+
+
 """
