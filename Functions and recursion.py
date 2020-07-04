@@ -49,6 +49,7 @@ print(max3(3, 5, 4))
 
 
 
+
 def max(*a):
     res = a[0]
     for val in a[1:]:
