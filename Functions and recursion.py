@@ -34,6 +34,7 @@ def max(a, b):
     else:
         return b
 
+
 def max3(a, b, c):
     return max(max(a, b), c)
 
