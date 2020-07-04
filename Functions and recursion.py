@@ -28,6 +28,7 @@ print(max(int(input()), int(input())))
 
 
 def max(a, b):
+    
     if a > b:
         return a
     else:
